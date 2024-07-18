@@ -38,7 +38,7 @@ The PoC implementation has been tested under Ubuntu 22.04 on an x86 64-bit syste
 The required packages are `python3` and `python3-requests`:
 
 ```bash
-apt-get update && apt-get install -y python3 python3-requests
+sudo apt-get update && sudo apt-get install -y python3 python3-requests
 ```
 
 Alternatively, a Docker container can be used to execute the script in a sandbox.
