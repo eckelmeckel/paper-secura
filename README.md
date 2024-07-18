@@ -21,7 +21,7 @@ Our paper "[SECURA: Unified Reference Architecture for Advanced Security and Tru
 
 This repository contains the code and data referred to in the paper.
 
-## Querying the VirusTotal Database
+## Querying the VirusTotal Database with Linux IMA Logs
 
 The VirusTotal database can be queried for vulnerabilities of binary executables based on a hash value.
 For that purpose, it provides a REST API (<https://www.virustotal.com/api/v3/>).
@@ -30,9 +30,11 @@ An Overview of the API can be found here: <https://docs.virustotal.com/reference
 An API key is required to use the API; please obtain one from <https://www.virustotal.com/gui/join-us>.
 The public API is limited to 500 requests per day and a rate of 4 requests per minute (see <https://docs.virustotal.com/reference/public-vs-premium-api>).
 
+This proof-of-concept (PoC) implementation uses [Linux Integrity Measurement Architecture (IMA)](https://sourceforge.net/p/linux-ima/wiki/Home/) logs to query the VirusTotal database for known vulnerabilities.
+
 ### Prerequisites and Docker Container
 
-The proof-of-concept (PoC) implementation has been tested under Ubuntu 22.04 on an x86 64-bit system (amd64) using Bash.
+The PoC implementation has been tested under Ubuntu 22.04 on an x86 64-bit system (amd64) using Bash.
 The required packages are `python3` and `python3-requests`:
 
 ```bash
